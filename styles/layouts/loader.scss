@@ -1,0 +1,64 @@
+@use '../variables' as var;
+.loader-container {
+  animation: 1.2s ease-in-out both hide-animation;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  height: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	.spinner {
+		animation: 2s linear infinite spinner-animation;
+    margin: clamp(50px, 10%, 180px) auto auto auto;
+    max-width: var.$spinner-max-width;
+		>circle {
+			animation: 1.4s ease-in-out infinite both circle-animation;
+			display: block;
+			fill: none;
+			stroke: var.$primary-color;
+			stroke-linecap: round;
+			stroke-dasharray: 283;
+			stroke-dashoffset: 280;
+			stroke-width: 3px;
+			transform-origin: 50%;
+		}
+	}
+}
+
+@keyframes hide-animation {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes circle-animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg);
+  }
+  
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
