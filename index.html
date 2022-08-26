@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ohMyFood, réservez le restaurant qui vous convient"/>
+	<link rel="stylesheet" href="../styles/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<title>Accueil - ohMyFood</title>
+	<script src="https://kit.fontawesome.com/7febd39ca5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="d-flex justify-center align-center relative">
+		<logo>
+			<a href="#">
+				<logo>
+					<img src="./images/logo/ohmyfood@2x.svg" alt="Logo">
+				</logo>
+			</a>
+		</logo>
+	</header>
+
+	<main class="margin-0">
+		<div class="d-flex align-center justify-center padding light-bold relative city-location">
+			<span class="fa-solid fa-location-dot"></span>
+			<span class="city">Paris, Belleville</span>
+		</div>
+
+
+		<section class="d-flex align-center justify-center flex-column padding title-section">
+			<h1 class="text-center margin-0 paddingx">Réservez le menu qui vous convient</h1>
+			<p class="text-center light margin-0">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+			<a class="margin-t padding paddingx-2 b-radius-2 link-to-restaurants" href="#restaurants">Explorer nos restaurants</a>
+		</section>
+
+		<section class="margin-0-auto how-to-use-container">
+			<div class="d-flex flex-column margin-0-auto width-fit how-to-use">
+				<h2 class="width-fit margin-0 relative">Fonctionnement</h2>
+				<ul>
+					<li class="d-flex align-center justify-start margin-t padding b-radius">
+						<span class="numbers b-radius-2">1</span>
+						<span class="fas fa-mobile-alt"></span>
+						<span class="bold">Choisissez un restaurant</span>
+					</li>
+					<li class="d-flex align-center justify-start margin-t padding b-radius">
+						<span class="numbers b-radius-2">2</span>
+						<span class="fas fa-list-ul"></span>
+						<span class="bold">Composez votre menu</span>
+					</li>
+					<li class="d-flex align-center justify-start margin-t padding b-radius">
+						<span class="numbers b-radius-2">3</span>
+						<span class="fas fa-store"></span>
+						<span class="bold">Dégustez au restaurant</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="d-flex flex-column justify-center margin-0-auto restaurants-container">
+			<h2>Restaurants</h2>
+			<div class="d-flex justify-center margin-0-auto restaurants-cards-wrapper">
+
+				<div class="d-flex nowrap flex-column align-center width-fit cols">
+					<article class="d-flex relative restaurants-cards" new>
+						<a href="#" class="d-flex justify-start">
+							<img src="../images/restaurants/la-palette-du-gout.jpg" alt="Image du restaurant La palette du goût">
+							<div>
+								<h3>La palette du goût</h3>
+								<p>Ménilmontant</p>
+							</div>
+						</a>
+						<label>
+							<input class="hidden heart-checkboxes" type="checkbox">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+								<g>
+									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+										c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+								</g>
+							</svg>
+						</label>
+					</article>
+
+					<article class="d-flex relative restaurants-cards" new>
+						<a href="#" class="d-flex justify-start">
+							<img src="../images/restaurants/la-note-enchantee.jpg" alt="Image du restaurant La note enchantée">
+							<div>
+								<h3>La note enchantée</h3>
+								<p>Charonne</p>
+							</div>
+						</a>
+						<label>
+							<input class="hidden heart-checkboxes" type="checkbox">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+								<g>
+									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+										c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+								</g>
+							</svg>
+						</label>
+					</article>
+				</div>
+
+				<div class="d-flex nowrap flex-column align-center cols">
+					<article class="d-flex relative restaurants-cards">
+						<a href="#" class="d-flex justify-start">
+							<img src="../images/restaurants/a-la-francaise.jpg" alt="Image du restaurant À la française">
+							<div>
+								<h3>À la française</h3>
+								<p>Cité Rouge</p>
+							</div>
+						</a>
+						<label>
+							<input id="checkbox" class="hidden heart-checkboxes" type="checkbox">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+								<g>
+									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+										c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+								</g>
+							</svg>
+						</label>
+					</article>
+
+					<article class="d-flex relative restaurants-cards">
+						<a href="#" class="d-flex justify-start">
+							<img src="../images/restaurants/le-delice-des-sens.jpg" alt="">
+							<div>
+								<h3>Le délice des sens</h3>
+								<p>Folie-Méricourt</p>
+							</div>
+						</a>
+						<label>
+							<input class="hidden heart-checkboxes" type="checkbox">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+								<g>
+									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+										c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+								</g>
+							</svg>
+						</label>
+					</article>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+
+	<div class="loader-container">
+		<svg class="spinner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="50" cy="50" fill="none" r="45" />
+		</svg>
+	</div>
+
+	<footer>
+		<nav>
+			<h2>ohmyfood</h2>
+			<ul>
+				<li><a href="#"><span class="fas fa-utensils"></span>Proposer un restaurant</a></li>
+				<li><a href="#"><span class="fas fa-hands-helping"></span>Devenir partenaire</a></li>
+				<li><a href="#" target="_blank">Mentions légales</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+</html>

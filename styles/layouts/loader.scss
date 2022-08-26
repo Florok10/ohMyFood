@@ -1,6 +1,6 @@
 @use '../variables' as var;
 .loader-container {
-  animation: 1.2s ease-in-out both hide-animation;
+  animation: 1ms ease-in-out 1.2s both hide-animation;
   background-color: #fff;
   display: flex;
   position: absolute;
@@ -10,12 +10,15 @@
   left: 0;
   right: 0;
   z-index: 1000;
-	.spinner {
-		animation: 2s linear infinite spinner-animation;
-    margin: clamp(50px, 10%, 180px) auto auto auto;
-    max-width: var.$spinner-max-width;
-		>circle {
-			animation: 1.4s ease-in-out infinite both circle-animation;
+  -webkit-animation: 1ms ease-in-out 1.2s both hide-animation;
+  .spinner {
+		animation: 2s linear 2 spinner-animation;
+		margin: clamp(50px, 10%, 180px) auto auto auto;
+		max-width: var.$spinner-max-width;
+    -webkit-animation: 2s linear 2 spinner-animation;
+
+    >circle {
+			animation: 1.4s ease-in-out 2 both circle-animation;
 			display: block;
 			fill: none;
 			stroke: var.$primary-color;
@@ -24,7 +27,8 @@
 			stroke-dashoffset: 280;
 			stroke-width: 3px;
 			transform-origin: 50%;
-		}
+			-webkit-animation: 1.4s ease-in-out 2 both circle-animation;
+    }
 	}
 }
 
@@ -42,24 +46,44 @@
   25% {
     stroke-dashoffset: 280;
     transform: rotate(0);
-  }
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+}
   50%,
   75% {
     stroke-dashoffset: 75;
     transform: rotate(45deg);
-  }
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
   
   100% {
     stroke-dashoffset: 280;
     transform: rotate(360deg);
-  }
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
 }
 
 @keyframes spinner-animation {
   0% {
     transform: rotateZ(0deg);
-  }
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+}
   100% {
-    transform: rotateZ(360deg)
-  }
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+}
 }
