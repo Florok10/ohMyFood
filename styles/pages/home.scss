@@ -1,8 +1,92 @@
-body {
-	margin: 0;
-	position: relative;
-	main {
-		background-color: blue;
-		height: 800px; 
+@use '../layouts';
+@use '../mixins' as m;
+@use '../variables' as var;
+
+main {
+	height: 800px; 
+}
+
+.city-location {
+	background-color: var.$light-grey;
+	.city {
+		margin: auto auto auto 0px;
+	}
+	.fa-location-dot {
+		margin: auto 10px auto auto;
+	}
+}
+
+.title-section {
+	background-color: var.$darker-white;
+	padding-bottom: 3rem;
+	h1, p {
+		margin: 10px auto;
+	}
+	p {
+		font-size: 18px;
+	}
+}
+
+.link-to-restaurants {
+	background: linear-gradient(var.$secondary-color, var.$primary-color);
+	color: #fff;
+	@include m.boxShadow(.6);
+	transition: .5s transform;
+}
+
+.link-to-restaurants:hover {
+	transform: scale(110%);
+}
+
+.how-to-use {
+	margin: 0 auto;
+	.fa-store {
+		color: var.$primary-color;
+	}
+	> div {
+		width: clamp(240px, 30%, 420px);
+		@include m.boxShadow(.2, 16px);
+		.numbers {
+			background-color: var.$primary-color;
+			color: #fff;
+			padding: 6px 12px;
+			position: relative;
+			right: clamp(8px, 6vw, 28px);
+		}
+		.fas {
+			margin: auto 10px auto 0;
+			width: 18px;
+		}
+		.fa-mobile-alt, .fa-list-ul {
+			color: var.$grey;
+		}
+		span.bold {
+			margin: auto auto auto 0;
+		}
+	}
+	>div:nth-child(4) {
+		background-color: lighten(var.$primary-color, 34%);
+	}
+}
+
+.restaurants-cards {
+	>img {
+		width: 100%;
+		height: clamp(240px, 60%, 360px);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.top-content-wrapper {
+		justify-content: space-around;
+		.how-to-use-container {
+			margin: 0;
+		}
+		.title-section {
+			width: fit-content;
+		}
+		.how-to-use {
+			background-color: #fff;
+		}
 	}
 }

@@ -1,3 +1,7 @@
+.relative {
+  position: relative;
+}
+
 .padding-0 {
   padding: 0;
 }
@@ -14,6 +18,21 @@
   padding: 4rem;
 }
 
+.paddingx {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.paddingx-2 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.paddingx-4 {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
 .margin-0 {
   margin: 0;
 }
@@ -24,6 +43,14 @@
 
 .margin-0-auto {
   margin: 0 auto;
+}
+
+.margin-t {
+  margin-top: 1rem;
+}
+
+.margin-t-2 {
+  margin-top: 2rem;
 }
 
 .d-flex {
@@ -87,12 +114,27 @@
   gap: 0;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
 
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light-bold {
+  font-weight: 600;
+}
+
 .bold {
-  color: #000;
   font-weight: 700;
 }
 
@@ -106,4 +148,16 @@
 
 .width-fit {
   width: fit-content;
+}
+
+.b-radius {
+  border-radius: 1rem;
+}
+
+.b-radius-2 {
+  border-radius: 2rem;
+}
+
+.b-radius-4 {
+  border-radius: 4rem;
 }

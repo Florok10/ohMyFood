@@ -9,6 +9,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 	.spinner {
 		animation: 2s linear infinite spinner-animation;
     margin: clamp(50px, 10%, 180px) auto auto auto;
