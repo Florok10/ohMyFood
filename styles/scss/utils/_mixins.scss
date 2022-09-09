@@ -1,0 +1,11 @@
+@mixin boxShadow($opacity, $blur: 6px) {
+	box-shadow: 0px 2px $blur 0px rgba(43, 43, 43, $opacity);
+};
+
+@mixin m-screen {
+	@media (min-width: 768px) { @content }
+};
+
+@mixin l-screen {
+	@media (min-width: 992px) { @content }
+};

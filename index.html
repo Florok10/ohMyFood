@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="ohMyFood, réservez le restaurant qui vous convient"/>
-	<link rel="stylesheet" href="./styles/style.css">
+	<meta name="description" content="ohMyFood, réservez le restaurant qui vous convient">
+	<link rel="stylesheet" href="./styles/css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,14 +13,12 @@
 	<script src="https://kit.fontawesome.com/7febd39ca5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header class="d-flex justify-center align-center relative">
-		<logo>
+	<header class="margin-0-auto d-flex justify-center align-center relative">
+		<div>
 			<a href="#">
-				<logo>
-					<img src="./images/logo/ohmyfood@2x.svg" alt="Logo">
-				</logo>
+				<img src="./images/logo/ohmyfood@2x.svg" alt="Logo">
 			</a>
-		</logo>
+		</div>
 	</header>
 
 	<main class="margin-0">
@@ -59,23 +57,29 @@
 			</div>
 		</section>
 
-		<section class="d-flex flex-column justify-center margin-0-auto restaurants-container">
-			<h2>Restaurants</h2>
+		<section id="restaurants" class="d-flex flex-column justify-center margin-0-auto restaurants-container">
+			<h2 class="relative">Restaurants</h2>
 			<div class="d-flex justify-center margin-0-auto restaurants-cards-wrapper">
 
 				<div class="d-flex nowrap flex-column align-center width-fit cols">
-					<article class="d-flex relative restaurants-cards" new>
-						<a href="#" class="d-flex justify-start">
+					<article class="d-flex relative restaurants-cards new-card">
+						<a href="./menus/menu_la_palette_du_gout.html" class="d-flex justify-start">
 							<img src="./images/restaurants/la-palette-du-gout.jpg" alt="Image du restaurant La palette du goût">
 							<div>
 								<h3>La palette du goût</h3>
 								<p>Ménilmontant</p>
 							</div>
 						</a>
-						<label>
+						<label class="hearts-container">
 							<input class="hidden heart-checkboxes" type="checkbox">
-							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="#FFF" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
 								<g>
+									<defs>
+										<linearGradient id="Gradient-1" x1="0" y1="140%" x2="0" y2="0">
+											<stop offset="5%" stop-color="#FF79DA" />
+											<stop offset="100%" stop-color="#9356DC" />
+										</linearGradient>
+									</defs>
 									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
 										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
 										c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
@@ -84,17 +88,17 @@
 						</label>
 					</article>
 
-					<article class="d-flex relative restaurants-cards" new>
-						<a href="#" class="d-flex justify-start">
+					<article class="d-flex relative restaurants-cards new-card">
+						<a href="./menus/menu_la_note_enchantee.html" class="d-flex justify-start">
 							<img src="./images/restaurants/la-note-enchantee.jpg" alt="Image du restaurant La note enchantée">
 							<div>
 								<h3>La note enchantée</h3>
 								<p>Charonne</p>
 							</div>
 						</a>
-						<label>
+						<label class="hearts-container">
 							<input class="hidden heart-checkboxes" type="checkbox">
-							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="#FFF" version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
 								<g>
 									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
 										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
@@ -107,16 +111,16 @@
 
 				<div class="d-flex nowrap flex-column align-center cols">
 					<article class="d-flex relative restaurants-cards">
-						<a href="#" class="d-flex justify-start">
+						<a href="./menus/menu_a_la_francaise.html" class="d-flex justify-start">
 							<img src="./images/restaurants/a-la-francaise.jpg" alt="Image du restaurant À la française">
 							<div>
 								<h3>À la française</h3>
 								<p>Cité Rouge</p>
 							</div>
 						</a>
-						<label>
+						<label class="hearts-container">
 							<input id="checkbox" class="hidden heart-checkboxes" type="checkbox">
-							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="#FFF" version="1.1" id="Capa_3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
 								<g>
 									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
 										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
@@ -127,16 +131,16 @@
 					</article>
 
 					<article class="d-flex relative restaurants-cards">
-						<a href="#" class="d-flex justify-start">
+						<a href="./menus/menu_le_delice_des_sens.html" class="d-flex justify-start">
 							<img src="./images/restaurants/le-delice-des-sens.jpg" alt="">
 							<div>
 								<h3>Le délice des sens</h3>
 								<p>Folie-Méricourt</p>
 							</div>
 						</a>
-						<label>
+						<label class="hearts-container">
 							<input class="hidden heart-checkboxes" type="checkbox">
-							<svg class="hearts" stroke="black" stroke-width="20" fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
+							<svg class="hearts" stroke="black" stroke-width="20" fill="#FFF" version="1.1" id="Capa_4" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 550 600">
 								<g>
 									<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
 										C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876

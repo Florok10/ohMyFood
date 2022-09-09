@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'shrikhand';
+	src: url('../../fonts/shrikhand.regular.ttf') format('truetype');
+}
+
+$titles-font: 'shrikhand';
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;

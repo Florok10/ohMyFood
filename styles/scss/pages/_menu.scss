@@ -1,0 +1,209 @@
+body {
+	background-color: $darker-white;
+}
+header {
+	box-shadow: none;
+}
+.restaurant-img {
+	max-width: 100%;
+	max-height: 32rem;
+	width: 100%;
+	object-fit: cover;
+}
+main {
+	background-color: $darker-white;
+	padding-top: 20px;
+	border-radius: 40px 40px 0 0;
+	-webkit-border-radius: 40px 40px 0 0;
+	-moz-border-radius: 40px 40px 0 0;
+	-ms-border-radius: 40px 40px 0 0;
+	-o-border-radius: 40px 40px 0 0;
+	transform: translateY(-50px);
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	-o-transform: translateY(-50px);
+	.title-container {
+		padding: 0 20px;
+		width: clamp(280px, 90%, 1160px);
+		margin: 0 auto;
+		h1 {
+			font-family: $titles-font;
+			font-weight: 400;
+			letter-spacing: 1.8px;
+			margin: 10px 0 0 0;
+		}
+		.hearts-container {
+			top: 16px;
+			right: 30px;
+			bottom: unset;
+		}
+	}
+	.order-form {
+		max-width: 1920px;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+		gap: 20px;
+		fieldset {
+			width: fit-content;
+		}
+	}
+	.menu-titles {
+		text-transform: uppercase;
+		font-weight: 300;
+		height: fit-content;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 60px;
+			height: 4px;
+			bottom: -4px;
+			background-color: $tertiary-color;
+		}
+	}
+	.menus {
+		animation-name: fade-in;
+		animation-duration: 800ms;
+		animation-timing-function: ease-in;
+		animation-fill-mode: both;
+		background-color: #fff;
+		border-radius: 12px;
+		width: clamp(288px, 40vw, 360px);
+		opacity: 0;
+		visibility: hidden;
+		cursor: pointer;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		-ms-border-radius: 12px;
+		-o-border-radius: 12px;
+		@include boxShadow(.2);
+		.plate-wrapper {
+			cursor: pointer;
+			margin: 10px 0 10px 10px;
+			min-width: 180px;
+			width: inherit;
+			padding-right: 20px;
+			.selection-title {
+				font-size: clamp(14px, 2vw, 18px);
+				min-width: 140px;
+				display: block;
+			}
+			.selection-description {
+				display: inline-block;
+				font-size: clamp(12px, 1.8vw, 14px);
+				font-weight: 300;
+				width: 80%;
+				margin: 6px auto 0 0;
+			}
+			.prices {
+				display: inline-block;
+				font-size: clamp(12px, 1.8vw, 14px);
+				margin: 6px 0 0 auto;
+				font-weight: 600;
+			}
+		}
+
+		.check-containers {
+			display: inline-flex;
+			background-color: $tertiary-color;
+			border-radius: 0 12px 12px 0;
+			min-width: 60px;
+			width: 60px;
+			margin-right: -60px;
+			transition-duration: 500ms;
+			-webkit-border-radius: 0 12px 12px 0;
+			-moz-border-radius: 0 12px 12px 0;
+			-ms-border-radius: 0 12px 12px 0;
+			-o-border-radius: 0 12px 12px 0;
+			.check-icons {
+				font-size: clamp(16px, 2vw, 18px);
+				color: $tertiary-color;
+				background-color: #fff;
+				padding: 2px;
+				border-radius: 50%;
+				transform: rotate(-280deg);
+				transition-duration: 500ms;
+				transition-delay: 100ms;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				-webkit-transform: rotate(-280deg);
+				-moz-transform: rotate(-280deg);
+				-ms-transform: rotate(-280deg);
+				-o-transform: rotate(-280deg);
+			}
+		}
+		
+		@for $i from 1 to 13 {
+			&.menu-#{$i} {
+				animation-delay: (#{$i * 100ms});
+			}
+		}
+
+		&:hover .check-containers, .plate-checkboxes:checked + .check-containers {
+			margin-right: unset;
+			.check-icons {
+				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				-moz-transform: rotate(0);
+				-ms-transform: rotate(0);
+				-o-transform: rotate(0);
+			}
+		}
+	}
+
+	.submit.btn {
+		background: linear-gradient($secondary-color, $primary-color);
+		cursor: pointer;
+		max-width: 240px;
+		font-size: 18px;
+		margin: 0 auto;
+		border: none;
+		color: #fff;
+		@include boxShadow(.6);
+		transition: .5s transform;
+		&:hover {
+			background: linear-gradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
+			@include boxShadow(1, 10px);
+		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	60% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@include l-screen {
+	main {
+		padding: 20px 0;
+		transform: none;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		.order-form {
+			padding: 20px 0;
+			fieldset {
+				gap: 20px;
+			}
+		}
+	}
+}

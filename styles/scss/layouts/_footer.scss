@@ -1,18 +1,13 @@
-@use '../variables' as var;
-@font-face {
-	font-family: 'shrikhand';
-	src: url('../../fonts/shrikhand.regular.ttf') format('truetype');
-}
 footer {
-	background-color: var.$dark-grey;
+	background-color: $dark-grey;
 	color: #fff;
 	padding: 20px;
 	nav {
 		margin: 0 auto;
-		max-width: 1800px;
+		max-width: 1180px;
 		h2 {
 			margin-top: 0;
-			font-family: 'shrikhand';
+			font-family: $titles-font;
 			font-weight: 400;
 			font-size: 28px;
 		}

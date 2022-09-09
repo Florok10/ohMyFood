@@ -1,0 +1,19 @@
+.hearts-container {
+	cursor: pointer;
+	position: absolute;
+	bottom: 18px;
+	right: 30px;
+	.hearts {
+		fill-opacity: 0;
+		transition: fill-opacity .5s ease .5s, stroke ease 1s;
+		-webkit-transition: fill-opacity .5s ease .5s, stroke ease 1s;
+		-moz-transition: fill-opacity .5s ease .5s, stroke ease 1s;
+		-ms-transition: fill-opacity .5s ease .5s, stroke ease 1s;
+		-o-transition: fill-opacity .5s ease .5s, stroke ease 1s;
+	}
+	.hearts:hover, .heart-checkboxes:checked + .hearts {
+		fill: url(#Gradient-1);
+		fill-opacity: 1;
+		stroke: transparent;
+	}
+}

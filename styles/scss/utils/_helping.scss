@@ -102,6 +102,10 @@
   align-items: stretch;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
 .align-around {
   align-content: space-around;
 }
@@ -120,6 +124,16 @@
 
 .nogap {
   gap: 0;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .text-left {
