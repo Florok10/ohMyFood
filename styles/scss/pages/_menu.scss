@@ -24,18 +24,17 @@ main {
 	-ms-transform: translateY(-50px);
 	-o-transform: translateY(-50px);
 	.title-container {
-		padding: 0 20px;
-		width: clamp(280px, 90%, 1160px);
+		width: clamp(200px, 90%, 1160px);
 		margin: 0 auto;
 		h1 {
 			font-family: $titles-font;
 			font-weight: 400;
-			letter-spacing: 1.8px;
 			margin: 10px 0 0 0;
+			font-size: clamp(16px, 7vw, 32px);
 		}
 		.hearts-container {
-			top: 16px;
-			right: 30px;
+			top: clamp(6px, 2vw, 16px);
+			right: 0px;
 			bottom: unset;
 		}
 	}
@@ -45,7 +44,19 @@ main {
 		padding: 20px 0 0 0;
 		gap: 20px;
 		fieldset {
+			@include fade-in;
 			width: fit-content;
+			padding: 0;
+			margin: 0;
+			&.entries {
+				animation-delay: 100ms;
+			}
+			&.dishes {
+				animation-delay: 400ms;
+			}
+			&.desserts {
+				animation-delay: 700ms;
+			}
 		}
 	}
 	.menu-titles {
@@ -63,13 +74,10 @@ main {
 		}
 	}
 	.menus {
-		animation-name: fade-in;
-		animation-duration: 800ms;
-		animation-timing-function: ease-in;
-		animation-fill-mode: both;
+		@include fade-in;
 		background-color: #fff;
 		border-radius: 12px;
-		width: clamp(288px, 40vw, 360px);
+		width: clamp(220px, 40vw, 360px);
 		opacity: 0;
 		visibility: hidden;
 		cursor: pointer;
@@ -81,9 +89,9 @@ main {
 		.plate-wrapper {
 			cursor: pointer;
 			margin: 10px 0 10px 10px;
-			min-width: 180px;
+			min-width: 135px;
 			width: inherit;
-			padding-right: 20px;
+			padding-right: 5px;
 			.selection-title {
 				font-size: clamp(14px, 2vw, 18px);
 				font-weight: 700;
@@ -156,13 +164,15 @@ main {
 	}
 
 	.submit.btn {
+		@include fade-in;
+		animation-delay: 1200ms;
 		background: linear-gradient($secondary-color, $primary-color);
 		cursor: pointer;
-		max-width: 240px;
 		font-size: 18px;
 		margin: 0 auto;
 		border: none;
 		color: #fff;
+		padding: 1rem clamp(50px, 20vw, 70px);
 		@include boxShadow(.6);
 		transition: .5s transform;
 		&:hover {
@@ -184,6 +194,23 @@ main {
 	100% {
 		opacity: 1;
 		visibility: visible;
+	}
+}
+
+@include m-screen {
+	main {
+		.title-container {
+			padding: 0 20px;
+			.hearts-container {
+				right: 30px;
+			}
+		}
+		.menus {
+			.plate-wrapper {
+				min-width: 180px;
+				padding-right: 20px;
+			}
+		}
 	}
 }
 

@@ -20,6 +20,14 @@ header {
 		}
 		div {
 			height: fit-content;
+			a {
+				display: block;
+				margin: 0 auto;
+				width: clamp(140px, 40vw, 196px);
+				img {
+					width: inherit;
+				}
+			}
 		}
 	} 
 }
